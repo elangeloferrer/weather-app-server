@@ -13,12 +13,27 @@ module.exports = (sequelize, DataTypes) => {
 	}
 	Location.init(
 		{
-			lat: DataTypes.DECIMAL(9, 6),
-			lon: DataTypes.DECIMAL(9, 6),
+			lat: {
+				type: DataTypes.DECIMAL(9, 6),
+				allowNull: false,
+				validate: {
+					notNull: { msg: "Latitude is required" },
+					notEmpty: { msg: "Latitude cannot be empty" },
+				},
+			},
+
+			lon: {
+				type: DataTypes.DECIMAL(9, 6),
+				allowNull: false,
+				validate: {
+					notNull: { msg: "Longitude is required" },
+					notEmpty: { msg: "Longitude cannot be empty" },
+				},
+			},
 			name: DataTypes.STRING,
 			region: DataTypes.STRING,
 			country: DataTypes.STRING,
-			tz_id: DataTypes.STRING,
+			tzId: DataTypes.STRING,
 		},
 		{
 			sequelize,

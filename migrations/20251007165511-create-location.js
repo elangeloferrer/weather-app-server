@@ -10,9 +10,11 @@ module.exports = {
 				type: Sequelize.INTEGER,
 			},
 			lat: {
+				allowNull: false,
 				type: Sequelize.DECIMAL(9, 6),
 			},
 			lon: {
+				allowNull: false,
 				type: Sequelize.DECIMAL(9, 6),
 			},
 			name: {
@@ -24,16 +26,18 @@ module.exports = {
 			country: {
 				type: Sequelize.STRING,
 			},
-			tz_id: {
+			tzId: {
 				type: Sequelize.STRING,
 			},
 			createdAt: {
 				allowNull: false,
 				type: Sequelize.DATE,
+				defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
 			},
 			updatedAt: {
 				allowNull: false,
 				type: Sequelize.DATE,
+				defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
 			},
 		});
 	},
