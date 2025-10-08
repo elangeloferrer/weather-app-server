@@ -13,7 +13,9 @@ Thumbs.db
 
 # Env files
 .env
-.env.*   # For .env.local, .env.production, etc.
+.env.*
+.env.development
+.env.production
 
 # VSCode
 .vscode/
