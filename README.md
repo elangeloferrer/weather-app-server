@@ -1,12 +1,15 @@
-# 🌦️ Weather App - Server
+# 🌦️ Weather App (Server)
 
-A simple and responsive weather application that displays real-time weather information for any city around the world.  
-Built with **Node.js** (backend) and **React.js** (frontend), it integrates with a public weather API to provide accurate and up-to-date forecasts.
+A simple and responsive weather application that displays real-time weather information for any city around the world.
+
+The Weather App (Server) built using Node.js, Express.js, and MySQL.
 
 ---
 
 ## 🚀 Features
 
+- Search weather by **city name**
+- Get **current location weather** using geolocation
 - **Drag the pin on the map** or **Click in any part of the map** to select the location where you want to check the current weather
 - Display **temperature, humidity, wind speed**, and condition
 - Dynamic **icons** based on weather
@@ -16,13 +19,6 @@ Built with **Node.js** (backend) and **React.js** (frontend), it integrates with
 ---
 
 ## 🛠️ Tech Stack
-
-**Frontend:**
-
-- ReactJS
-- Axios
-- TailwindCSS V4
-- react-leaflet and leaflet (for visual map)
 
 **Backend:**
 
@@ -34,11 +30,14 @@ Built with **Node.js** (backend) and **React.js** (frontend), it integrates with
 - CORS (Cross-Origin Resource Sharing)
 - Nodemon (Dev server auto-restart)
 
-**API:**
-
-- [OpenWeatherMap API](https://openweathermap.org/api) _(Free plan available)_
-
 ---
+
+## Prerequisites
+
+- Node.js (v18 or higher)
+- npm (comes with Node)
+- MySQL
+- Git
 
 ## ⚙️ Installation & Setup
 
@@ -61,6 +60,12 @@ npm install
 ## 3. Setup Environment Variables
 
 Create a .env.development file in the root folder:
+
+```bash
+touch .env.development
+```
+
+Copy & Paste the following keys and values:
 
 ```bash
 APP_URL=http://localhost:3001
@@ -100,4 +105,4 @@ Server runs at: http://localhost:3001
 
 ---
 
-You're all set — your **NodetJS** + **ExpressJS** + **MySQL** (Weather App - Server) project is now fully installed and ready to run! 🚀
+You're all set — your **NodetJS** + **ExpressJS** + **MySQL** [Weather App (Server)] project is now fully installed and ready to run! 🚀
