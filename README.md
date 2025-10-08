@@ -8,8 +8,6 @@ The Weather App (Server) built using Node.js, Express.js, and MySQL.
 
 ## 🚀 Features
 
-- Search weather by **city name**
-- Get **current location weather** using geolocation
 - **Drag the pin on the map** or **Click in any part of the map** to select the location where you want to check the current weather
 - Display **temperature, humidity, wind speed**, and condition
 - Dynamic **icons** based on weather
