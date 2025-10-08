@@ -14,13 +14,8 @@ class LocationController {
 	});
 
 	create = handleAsync(async (req, res) => {
-		const newLocation = await locationService.create(req.body);
-		HandleResponse.success(
-			res,
-			newLocation,
-			"Locations created successfully",
-			201
-		);
+		const result = await locationService.create(req.body);
+		HandleResponse.success(res, result.data, result.message, result.statusCode);
 	});
 }
 

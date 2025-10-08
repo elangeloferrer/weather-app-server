@@ -16,8 +16,8 @@ class LocationService extends BaseService {
 		}
 
 		// Parse into Float
-		const parsedLat = parseFloat(lat).toFixed(6);
-		const parsedLon = parseFloat(lon).toFixed(6);
+		const parsedLat = parseFloat(parseFloat(lat).toFixed(6));
+		const parsedLon = parseFloat(parseFloat(lon).toFixed(6));
 
 		// Check for duplicates
 		const existing = await this.repository.findOne({
@@ -26,14 +26,11 @@ class LocationService extends BaseService {
 		});
 
 		if (existing) {
-			if (existing) {
-				return {
-					success: false,
-					message: "Location with the same coordinates is already saved",
-					data: existing,
-					statusCode: 200,
-				};
-			}
+			return {
+				message: "Location with the same coordinates is already saved",
+				data: existing,
+				statusCode: 200,
+			};
 		}
 
 		// Proceed to create
@@ -46,7 +43,11 @@ class LocationService extends BaseService {
 			tzId,
 		});
 
-		return newLocation;
+		return {
+			message: "Locations created successfully",
+			data: newLocation,
+			statusCode: 201,
+		};
 	}
 }
 
